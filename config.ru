@@ -10,6 +10,7 @@ puts '-' * 50
 puts 'SETTINGS'.center(50)
 puts "RACK_ENV=#{ENV['RACK_ENV']}"
 puts "AWS_REGION=#{ENV['AWS_REGION']}"
+puts "BUCKET_NAME=#{ENV['BUCKET_NAME']}"
 puts '-' * 50
 puts ''
 
