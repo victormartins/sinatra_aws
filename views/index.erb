@@ -5,10 +5,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>AWS Sinatra</title>
+  <script src="./javascript/dropzone.js"></script>
+  <style type="text/css" media="screen">
+    body {
+      background-color: #546E7A;
+      text-align: center;
+      color: #B0BEC5;
+    }
+
+    .dropzone{
+      background-color: #B0BEC5;
+      width: 30%;
+      margin: 0 auto;
+      height: 200px;
+      color: #455A64;
+      font-size: 2em;
+    }
+
+    .dz-message {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      height: 100%
+    }
+  </style>
+
 </head>
 
 <body>
   <h1>Sinatra AWS</h1>
+  <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+  </form>
 </body>
 
 </html>
