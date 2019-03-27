@@ -3,10 +3,13 @@ Bundler.require(:default)
 
 require_relative './lib/aws_app'
 
+ENV['AWS_REGION']='eu-west-2'
+
 puts ''
 puts '-' * 50
 puts 'SETTINGS'.center(50)
 puts "RACK_ENV=#{ENV['RACK_ENV']}"
+puts "AWS_REGION=#{ENV['AWS_REGION']}"
 puts '-' * 50
 puts ''
 

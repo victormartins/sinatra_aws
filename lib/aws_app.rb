@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require "sinatra/reloader"
 
+require_relative 'upload_file'
+
 class AWSApp < Sinatra::Application
   set :sessions, true
   set :bind, '0.0.0.0'
@@ -11,8 +13,11 @@ class AWSApp < Sinatra::Application
   end
 
   get '/' do
-    respond_with :index, :request_method => 'GET' do |f|
-      erb :index
-    end
+    erb :index
+  end
+
+  post '/file-upload' do
+    file = params["file"]
+    UploadFile.new.call(file)
   end
 end
